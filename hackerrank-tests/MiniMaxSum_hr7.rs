@@ -1,11 +1,5 @@
 use std::io::{self, BufRead};
 
-/*
- * Complete the 'miniMaxSum' function below.
- *
- * The function accepts INTEGER_ARRAY arr as parameter.
- */
-
 fn miniMaxSum(arr: &[i32]) {
     let total_sum: i32 = arr.iter().sum();
     let min_value = *arr.iter().min().unwrap();
