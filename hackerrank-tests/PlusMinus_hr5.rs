@@ -1,12 +1,7 @@
 use std::io::{self, BufRead};
 
-/*
- * Complete the 'plusMinus' function below.
- *
- * The function accepts INTEGER_ARRAY arr as parameter.
- */
 fn plusMinus(arr: &[i32]) {
-    let n = arr.len() as f64; // Total number of elements
+    let n = arr.len() as f64;
     let (mut positive_count, mut negative_count, mut zero_count) = (0, 0, 0);
 
     for &num in arr {
@@ -19,12 +14,10 @@ fn plusMinus(arr: &[i32]) {
         }
     }
 
-    // Calculate fractions
     let positive_fraction = positive_count as f64 / n;
     let negative_fraction = negative_count as f64 / n;
     let zero_fraction = zero_count as f64 / n;
 
-    // Print results formatted to six decimal places
     println!("{:.6}", positive_fraction);
     println!("{:.6}", negative_fraction);
     println!("{:.6}", zero_fraction);
